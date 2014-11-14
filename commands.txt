@@ -1,0 +1,5 @@
+ffmpeg -i videoplayback.flv -s 4cif -r 1 -f image2  output/image%05d.jpg
+
+
+
+./usr/bin/opencv_traincascade -data /Users/ashton/Downloads -vec /Users/ashton/Downloads/myvecfile.vec -bg /Users/ashton/Downloads/opencv-haar-classifier-training-master/negatives.txt -numStages 12 -numPos 250 -numNeg 200 -precalcValBufSize 2048 -precalcIdxBufSize 2048 -w 40 -h 80 -minHitRate 0.9 -maxFalseAlarmRate 0.5
